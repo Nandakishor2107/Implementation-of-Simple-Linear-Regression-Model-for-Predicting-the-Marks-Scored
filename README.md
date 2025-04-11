@@ -26,11 +26,12 @@ To write a program to predict the marks scored by a student using the simple lin
 
 ## Program:
 
-Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: Nanda Kishor S P
-RegisterNumber: 212224040210
+Program to implement the simple linear regression model for predicting the marks scored.<br>
+Developed by: Nanda Kishor S P<br>
+RegisterNumber: 212224040210<br>
 
-```import pandas as pd
+```
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 #import libraries to find mae, mse
@@ -38,50 +39,67 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 #read csv file
 df=pd.read_csv("student_scores.csv")
 #displaying the content in datafile
-df.head()```
+df.head()
+```
 
-```# Segregating data to variables
+```
+# Segregating data to variables
 X = df[["Hours"]]
-y = df["Scores"]```
+y = df["Scores"]
+```
 
-```#splitting train and test data
+```
+#splitting train and test data
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)```
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
+```
 
-```#import linear regression model and fit the model with the data
+```
+#import linear regression model and fit the model with the data
 from sklearn.linear_model import LinearRegression
 model = LinearRegression()
 model.fit(X, y)
-y_pred = model.predict(X_test)```
+y_pred = model.predict(X_test)
+```
 
-```#displaying predicted values
-y_pred```
+```
+#displaying predicted values
+y_pred
+```
 
-```#displaying actual values
-y_test```
+```
+#displaying actual values
+y_test
+```
 
-```#graph plot for training data
+
+```
+#graph plot for training data
 plt.scatter(X_train, y_train, color="blue", )
 plt.plot(X_train, model.predict(X_train), color="red")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
-plt.title("Hours vs Scores - Training Data")```
+plt.title("Hours vs Scores - Training Data")
+```
 
-```#graph plot for test data
+```
+#graph plot for test data
 plt.scatter(X_test, y_test, color="blue", )
 plt.plot(X_test, model.predict(X_test), color="red")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
-plt.title("Hours vs Scores - Test Data")```
+plt.title("Hours vs Scores - Test Data")
+```
 
-```#find mae,mse,rmse
+```
+#find mae,mse,rmse
 mae = mean_absolute_error(y_pred, y_test)
 print(f"The MAE is {mae:.4f}")
 mse = mean_squared_error(y_pred, y_test)
 print(f"The MSE is {mse:.4f}")
 rmse = np.sqrt(mse)
-print(f"The RMSE is {rmse:.4f}")```
-
+print(f"The RMSE is {rmse:.4f}")
+```
 ## Output:
 
 ###Head Values
