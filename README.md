@@ -26,11 +26,11 @@ To write a program to predict the marks scored by a student using the simple lin
 
 ## Program:
 
-Program to implement the simple linear regression model for predicting the marks scored.<br>
-Developed by: Nanda Kishor S P<br>
-RegisterNumber: 212224040210<br>
+*Program to implement the simple linear regression model for predicting the marks scored.*<br>
+*Developed by: Nanda Kishor S P*<br>
+*RegisterNumber: 212224040210*<br>
 
-```
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,19 +42,19 @@ df=pd.read_csv("student_scores.csv")
 df.head()
 ```
 
-```
+```python
 # Segregating data to variables
 X = df[["Hours"]]
 y = df["Scores"]
 ```
 
-```
+```python
 #splitting train and test data
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
 ```
 
-```
+```python
 #import linear regression model and fit the model with the data
 from sklearn.linear_model import LinearRegression
 model = LinearRegression()
@@ -62,18 +62,18 @@ model.fit(X, y)
 y_pred = model.predict(X_test)
 ```
 
-```
+```python
 #displaying predicted values
 y_pred
 ```
 
-```
+```python
 #displaying actual values
 y_test
 ```
 
 
-```
+```python
 #graph plot for training data
 plt.scatter(X_train, y_train, color="blue", )
 plt.plot(X_train, model.predict(X_train), color="red")
@@ -82,7 +82,7 @@ plt.ylabel("Scores")
 plt.title("Hours vs Scores - Training Data")
 ```
 
-```
+```python
 #graph plot for test data
 plt.scatter(X_test, y_test, color="blue", )
 plt.plot(X_test, model.predict(X_test), color="red")
@@ -91,7 +91,7 @@ plt.ylabel("Scores")
 plt.title("Hours vs Scores - Test Data")
 ```
 
-```
+```python
 #find mae,mse,rmse
 mae = mean_absolute_error(y_pred, y_test)
 print(f"The MAE is {mae:.4f}")
@@ -102,27 +102,27 @@ print(f"The RMSE is {rmse:.4f}")
 ```
 ## Output:
 
-###Head Values
+### Head Values
 ![alt text](image.png)
-
+<br>
 ###Tail Values
 ![alt text](image-1.png)
-
+<br>
 ###X Values
 ![alt text](image-2.png)
-
+<br>
 ###Actual Y values
 ![alt text](image-3.png)
-
+<br>
 ###Predicted Y values
 ![alt text](image-4.png)
-
+<br>
 ###Training Data Graph
 ![alt text](image-5.png)
-
+<br>
 ###Test Data Graph
 ![alt text](image-6.png)
-
+<br>
 ###Regression Performace Metrics
 ![alt text](image-7.png)
 
