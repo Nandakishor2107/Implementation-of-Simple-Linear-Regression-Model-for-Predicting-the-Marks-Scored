@@ -103,27 +103,27 @@ print(f"The RMSE is {rmse:.4f}")
 ## Output:
 
 ### Head Values
-![alt text](image.png)
+![alt text](image.png)  
 <br>
-###Tail Values
-![alt text](image-1.png)
+### Tail Values
+![alt text](image-1.png)  
 <br>
-###X Values
-![alt text](image-2.png)
+### X Values
+![alt text](image-2.png)  
 <br>
-###Actual Y values
-![alt text](image-3.png)
+### Actual Y values
+![alt text](image-3.png)  
 <br>
-###Predicted Y values
-![alt text](image-4.png)
+### Predicted Y values
+![alt text](image-4.png)  
 <br>
-###Training Data Graph
-![alt text](image-5.png)
+### Training Data Graph
+![alt text](image-5.png)  
 <br>
-###Test Data Graph
-![alt text](image-6.png)
+### Test Data Graph
+![alt text](image-6.png)  
 <br>
-###Regression Performace Metrics
+### Regression Performace Metrics
 ![alt text](image-7.png)
 
 ## Result:
